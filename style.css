@@ -23,7 +23,6 @@ a:hover {
     top: 0;
     bottom: 0;
     width: 100%;
-    z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
@@ -289,7 +288,7 @@ a:hover {
 
 .navbar {
     margin-bottom: 0;
-    z-index: 1;
+    
 }
 
 .navbar-brand {
@@ -311,6 +310,26 @@ a:hover {
     min-width: 100px;
 }
 
+.navbar-brand:hover{
+    border: 2px black solid;
+    border-radius: 20px;
+}
+
+.navbar-brand:focus{
+    border: 2px black solid;
+    border-radius: 20px;
+}
+
+ul li a:hover{
+    border: 2px black solid;
+    border-radius: 20px;
+}
+
+li a:focus{
+    border: 2px black solid;
+    border-radius: 20px;
+}
+
 .nav-center .navbar-brand img {
     margin: 0;
 }
@@ -319,7 +338,7 @@ a:hover {
     padding-top: 2px;
     margin-right: -16px;
     float: right;
-    z-index: 1;
+    
 }
 
 .nav > li {
@@ -359,7 +378,7 @@ a:hover {
 .nav-invert .navbar-brand {
     float: right;
     position: relative;
-    z-index: 2;
+    
 }
 
 @media (min-width: 768px) {
@@ -517,7 +536,6 @@ button {
     bottom: 20px;
     right: 20px;
     opacity: 0;
-    z-index: 500;
     transition: all .3s ease-in-out;
 }
 
@@ -547,7 +565,6 @@ a[data-lightbox]:hover::before {
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
-    z-index: 1;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -560,6 +577,28 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
+a[data-lightbox]:focus::before {
+    content: "+";
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .6);
+    color: #FFF;
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+a[data-lightbox]:focus img {
+    opacity: 0.6;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+}
 #lightbox-modal {
     display: flex;
     align-items: center;
@@ -592,7 +631,6 @@ a[data-lightbox]:hover img {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 20;
     background: rgba(0, 0, 0, .5);
     border: none;
     line-height: 30px;
@@ -615,7 +653,6 @@ a[data-lightbox]:hover img {
     transition: all .2s ease-in-out;
     position: absolute;
     top: 45%;
-    z-index: 1;
     opacity: 0.4;
 }
 
@@ -704,6 +741,8 @@ p {
     margin: auto auto auto auto;
 }
 
+
+
 h2 {
     font-size: 22px;
     line-height: 1.4em;
@@ -737,11 +776,21 @@ h4 {
 
 .white {
     color: #FFFFFF!important;
+    font-size: 1.8rem;
+}
+
+.white a:focus {
+    color: black!important;
+}
+
+.white a:hover {
+    color: black!important;
 }
 
 .portfolio-thumb {
     margin-bottom: 24px;
 }
+
 
 .portfolio-row {
     margin-bottom: 44px;
@@ -771,21 +820,26 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #232d4c;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #364577;
     color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #ffffff!important;
+    color: #232d4c!important;
+}
+
+.btn-atomic-tangerine:focus {
+    background: #fff!important;
+    color: #232d4c!important;
 }
 
 .ltc-white {
@@ -801,7 +855,7 @@ h4 {
 }
 
 .ltc-atomic-tangerine:hover {
-    color: #c27956!important;
+    color: #232d4c!important;
 }
 
 .icon-dark-slate-blue {
@@ -893,6 +947,7 @@ h4 {
     .page-container {
         overflow-x: hidden;
         position: relative;
+        color: red;
     }
     h1,
     h2,
@@ -1040,3 +1095,14 @@ h4 {
         text-align: center;
     }
 }
+
+#info{
+    text-align :center;
+    margin-top: 5%;
+}
+
+a:hover{
+
+    font-weight: bold;
+}
+
