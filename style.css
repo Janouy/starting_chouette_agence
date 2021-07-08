@@ -321,12 +321,12 @@ a:hover {
 }
 
 ul li a:hover{
-    border: 2px black solid;
+    border: 2px #232d4c solid;
     border-radius: 20px;
 }
 
 li a:focus{
-    border: 2px black solid;
+    border: 2px #232d4c solid;
     border-radius: 20px;
 }
 
@@ -496,7 +496,19 @@ button {
 
 .icon-md {
     font-size: 30px!important;
+    
 }
+
+.icon-md:hover{
+    color: #fff!important;
+    
+}
+
+.icon-md:focus{
+    color: #fff!important;
+    text-decoration: none;
+}
+
 
 .icon-lg {
     font-size: 60px!important;
@@ -1101,8 +1113,5 @@ h4 {
     margin-top: 5%;
 }
 
-a:hover{
 
-    font-weight: bold;
-}
 
